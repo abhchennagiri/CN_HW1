@@ -1,0 +1,14 @@
+plot 'hw1_reno_reno.dat' using 0:1 with lines lc rgb 'blue' title 'TCP Flow 1','hw1_reno_reno.dat' using 2:0 with lines lc rgb 'black','hw1_reno_reno.dat' using 3:0 with lines lc rgb 'red'
+
+
+New Reno - Reno
+
+plot [:] [:13] 'hw1_newreno_reno_bw.dat' using 1:2 with lines lc rgb 'blue' title 'TCP Flow 1','hw1_newreno_reno_bw.dat' using 1:3 with lines lc rgb 'black'title 'TCP Flow2', 'hw1_newreno_reno_bw.dat' using 1:4 with lines lc rgb 'red' title 'CBR Flow'
+
+plot [:] [:] 'hw1_newreno_reno_avgpktloss.dat' using 1:2 with lines lc rgb 'blue' title 'TCP Flow 1','hw1_newreno_reno_avgpktloss.dat' using 1:3 with lines lc rgb 'black'title 'TCP Flow2', 'hw1_newreno_reno_avgpktloss.dat' using 1:4 with lines lc rgb 'red' title 'CBR Flow'
+
+All the above graphs are quite self explanatory. The bandwidth shared by the TCP flow keeps decreasing until it becomes zero at a CBR Rate of 10Mbps. 
+
+
+The average packet drop rate starts to increase as the CBR rate goes roughly above 5Mbps which is essentially the fair bandwidth allocated to both the flows. The bandwidth sharing is not fair between an TCP variant and a CBR flow.
+
